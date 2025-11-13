@@ -1,7 +1,7 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import './interactividad.js';
-
-AOS.init({
-  duration: 1000,
+document.addEventListener("DOMContentLoaded", () => {
+  const btns = document.querySelectorAll(".btn");
+  btns.forEach(btn => {
+    btn.addEventListener("mouseover", () => btn.classList.add("hover"));
+    btn.addEventListener("mouseout", () => btn.classList.remove("hover"));
+  });
 });
