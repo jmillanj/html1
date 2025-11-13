@@ -1,0 +1,71 @@
+@use "variables" as *;
+
+body {
+    font-family: $font-stack;
+    margin: 0;
+    color: $text-color;
+}
+
+.header {
+    background: $primary-color;
+    color: white;
+    padding: 1rem;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar__menu {
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .navbar__menu {
+            display: none;
+            flex-direction: column;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+    }
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem;
+    background: $secondary-color;
+}
+
+.footer {
+    background: $primary-color;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: black;
+    color: white;
+    padding: 0.5rem;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}

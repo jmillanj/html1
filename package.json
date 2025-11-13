@@ -1,9 +1,8 @@
 {
-  "name": "parcel-vanilla-starter",
+  "name": "viajes-por-el-mundo",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "source": "src/index.html",
-  "browserslist": "> 0.5%, last 5 versions, not dead",
   "scripts": {
     "start": "npm-run-all clean parcel:dev",
     "build": "npm-run-all clean parcel:build",
@@ -12,9 +11,15 @@
     "clean": "rimraf dist .parcel-cache"
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.16.1",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.14.2",
     "posthtml-include": "^2.0.1",
-    "rimraf": "^6.1.0"
-  }
+    "rimraf": "^6.1.0",
+    "sass": "^1.81.0"
+  },
+  "dependencies": {
+    "aos": "^2.3.4"
+  },
+  "browserslist": "> 0.5%, last 5 versions, not dead"
 }
